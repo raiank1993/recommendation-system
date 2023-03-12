@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -15,7 +17,7 @@ import lombok.NoArgsConstructor;
 public class RecommendationRequest {
 
     private User user;
-    private Restaurant[] availableRestaurants;
+    private List<Restaurant> availableRestaurants;
 
     @Override
     public String toString() {

@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Data
 @Builder
@@ -17,8 +18,8 @@ import java.util.Arrays;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class User {
 
-    private CuisineTracking[]  cuisines;
-    private CostTracking[] costBracket;
+    private List<CuisineTracking> cuisines;
+    private List<CostTracking> costBracket;
 
     @Override
     public String toString() {
