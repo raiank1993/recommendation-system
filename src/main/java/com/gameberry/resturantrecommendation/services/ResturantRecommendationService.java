@@ -46,7 +46,7 @@ public class ResturantRecommendationService {
 
             //case 2
           
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 filteredRestaurant(createList(primaryAndSecondaryCuisine, Constants.PRIMARY), createList(primaryAndSecondaryCostBracket, Constants.PRIMARY), recommendedResturant, restaurants, true, 4F, false, Constants.GREATER_THAN_EQUAL_TO);
             }
 
@@ -54,39 +54,39 @@ public class ResturantRecommendationService {
             
             //case 3
 
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 filteredRestaurant(createList(primaryAndSecondaryCuisine, Constants.PRIMARY), createList(primaryAndSecondaryCostBracket, Constants.SECONDARY), recommendedResturant, restaurants, true, 4.5F, false, Constants.GREATER_THAN_EQUAL_TO);
             }
 
             //case 4
 
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 filteredRestaurant(createList(primaryAndSecondaryCuisine, Constants.SECONDARY), createList(primaryAndSecondaryCostBracket, Constants.PRIMARY), recommendedResturant, restaurants, true, 4.5F, false, Constants.GREATER_THAN_EQUAL_TO);
             }
 
            
             //case 5
 
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 topNewlyCreatedRestaurant(recommendedResturant, restaurants, 4);
             }
 
             //case 6
 
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 filteredRestaurant(createList(primaryAndSecondaryCuisine, Constants.PRIMARY), createList(primaryAndSecondaryCostBracket, Constants.PRIMARY), recommendedResturant, restaurants, true, 4F, false, Constants.LESS_THAN);
             }
 
            
             //case 7
 
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 filteredRestaurant(createList(primaryAndSecondaryCuisine, Constants.PRIMARY), createList(primaryAndSecondaryCostBracket, Constants.SECONDARY), recommendedResturant, restaurants, true, 4.5F, false, Constants.LESS_THAN);
             }
 
             //case 8
 
-            if(recommendedResturant.size() < 100){
+            if(recommendedResturant.size() < Constants.LIMIT){
                 filteredRestaurant(createList(primaryAndSecondaryCuisine, Constants.SECONDARY), createList(primaryAndSecondaryCostBracket, Constants.PRIMARY), recommendedResturant, restaurants, true, 4.5F, false, Constants.LESS_THAN);
             }
 
@@ -94,8 +94,8 @@ public class ResturantRecommendationService {
             //add remaining resturants
 
 
-            if(recommendedResturant.size() < 100){
-                int count = 100 - recommendedResturant.size();
+            if(recommendedResturant.size() < Constants.LIMIT){
+                int count = Constants.LIMIT - recommendedResturant.size();
                 for(Restaurant restaurant : restaurants){
                     if(count > 0){
                         recommendedResturant.add(restaurant.getRestaurantId());
