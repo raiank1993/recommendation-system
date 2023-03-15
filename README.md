@@ -1,5 +1,5 @@
 # recommendation-system
-Recommendation System of Resturant
+Recommendation System of Resturant 
 
 Curl to get the recommendation -- 
 
