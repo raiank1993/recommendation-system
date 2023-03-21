@@ -91,6 +91,8 @@ public class ResturantRecommendationService {
             }
 
 
+            log.info("indie");
+
             //add remaining resturants
 
 
