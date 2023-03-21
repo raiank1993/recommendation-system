@@ -91,8 +91,11 @@ public class ResturantRecommendationService {
             }
 
 
+
             //add remaining resturants
 
+
+            log.info("isnide 23");
 
             if(recommendedResturant.size() < Constants.LIMIT){
                 int count = Constants.LIMIT - recommendedResturant.size();
