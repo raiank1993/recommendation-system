@@ -92,6 +92,7 @@ public class ResturantRecommendationService {
 
 
             log.info("indie");
+            log.info("indie1");
 
             //add remaining resturants
 
